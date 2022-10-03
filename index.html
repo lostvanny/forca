@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Forca</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div class="grid">
+        <section class="sec-titulo">
+            <h1 class="titulo">A FORCA</h1>
+            <div class="pontuacao-novo">
+                <h2>pontuacao: <span id="qtd-pontos">000</span></h2>
+
+                <div class="botoes">
+                    <button id="btnNewGame" class="btn">NOVO JOGO</button>
+                    <button id="btnNewWord" class="btn" onclick="popUp()">NOVA PALAVRA</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-boneco">
+            <h2 id="vidas">VIDAS: <span>******</span></h2>
+            <canvas id="myCanvas"></canvas>
+
+            <h3 id="palavra"></h3>
+        </section>
+
+        <section class="sec-principal">
+            <section class="sec-saidatxt" id="secSaida">
+
+            </section>
+
+            <section class="sec-tentativas">
+                <p id="tentativas"></p>
+            </section>
+        </section>
+
+        <section id="sec-nova-palavra">
+            <input type="text" name="novapalavra" id="newWord" maxlength="8" placeholder="DIGITE AQUI...">
+            <div class="botoes-adcpala">
+                <button class="btn-adc verde" id="btnAdc" type="button">ADICIONAR</button>
+                <button class="btn-adc vermelho" type="button" onclick="popUp()">CANCELAR</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
